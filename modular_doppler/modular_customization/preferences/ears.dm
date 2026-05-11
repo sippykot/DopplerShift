@@ -510,7 +510,7 @@
 	return ..()
 
 /datum/preference/choiced/species_feature/teshari_ears/create_default_value()
-	return /datum/sprite_accessory/blank::name
+	return /datum/sprite_accessory/ears_more/teshari/regular::name
 
 /datum/preference/choiced/species_feature/teshari_ears/apply_to_human(mob/living/carbon/human/target, value)
 	if(target.dna.ear_type == TESHARI)
