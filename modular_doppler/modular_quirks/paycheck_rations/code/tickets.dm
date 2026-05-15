@@ -31,7 +31,7 @@
 		forceMove(drop_location(supply_console_used))
 		playsound(supply_console_used, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 		return ITEM_INTERACT_BLOCKING
-	switch(diet_choice)
+		switch(diet_choice)
 		if("Standard Diet")
 			var/humies_aspics = list(
 				/obj/item/food/aspic/vegetable_soup,
@@ -39,12 +39,17 @@
 				/obj/item/food/aspic/beet,
 			)
 			items_we_deliver += pick(humies_aspics)
+			var/hooman_sauce = list(
+				/obj/item/reagent_containers/condiment/pack/ketchup,
+				/obj/item/reagent_containers/condiment/pack/hotsauce,
+				/obj/item/reagent_containers/condiment/pack/astrotame,
+			)
+			items_we_deliver += pick(hooman_sauce)
 			items_we_deliver += /obj/item/reagent_containers/applicator/pill/tea_brick
 			items_we_deliver += /obj/item/food/breadslice/hardtack
 			items_we_deliver += /obj/item/food/breadslice/hardtack
 			items_we_deliver += /obj/item/food/breadslice/hardtack
 			items_we_deliver += /obj/item/food/cheese/firm_cheese_slice/bigger
-			items_we_deliver += /obj/item/reagent_containers/cup/glass/waterbottle/large
 		if("Tizirian Diet")
 			var/lizard_aspics = list(
 				/obj/item/food/aspic/miso,
@@ -52,12 +57,17 @@
 				/obj/item/food/aspic/satsuma,
 			)
 			items_we_deliver += pick(lizard_aspics)
+			var/lizard_sauce = list(
+				/obj/item/reagent_containers/condiment/pack/chili,
+				/obj/item/reagent_containers/condiment/pack/bbqsauce,
+				/obj/item/reagent_containers/condiment/pack/astrotame,
+			)
+			items_we_deliver += pick(lizard_sauce)
 			items_we_deliver += /obj/item/reagent_containers/applicator/pill/tea_brick/mushroom
 			items_we_deliver += /obj/item/food/breadslice/roottack
 			items_we_deliver += /obj/item/food/breadslice/roottack
 			items_we_deliver += /obj/item/food/headcheese_slice
 			items_we_deliver += /obj/item/food/headcheese_slice
-			items_we_deliver += /obj/item/reagent_containers/cup/glass/waterbottle/large
 	make_the_actual_order(supply_console_used, user)
 	return ITEM_INTERACT_SUCCESS
 
