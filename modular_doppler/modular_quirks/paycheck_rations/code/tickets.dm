@@ -31,7 +31,7 @@
 		forceMove(drop_location(supply_console_used))
 		playsound(supply_console_used, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
 		return ITEM_INTERACT_BLOCKING
-		switch(diet_choice)
+	switch(diet_choice)
 		if("Standard Diet")
 			var/humies_aspics = list(
 				/obj/item/food/aspic/vegetable_soup,
